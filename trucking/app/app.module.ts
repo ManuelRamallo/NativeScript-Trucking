@@ -6,6 +6,15 @@ import { AppComponent } from "./app.component";
 import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
+import {RutasService} from './services/rutas.service';
+import {CamionesService} from './services/camiones.service';
+import {CamionesComponent} from './camiones/camiones.component';
+import {ListadoCamionesComponent} from './listado-camiones/listado-camiones.component';
+import {RutasComponent} from './rutas/rutas.component';
+import {ListadoRutasComponent} from './listado-rutas/listado-rutas.component';
+import {CargasComponent} from './cargas/cargas.component';
+import {ListadoCargasComponent} from './listado-cargas/listado-cargas.component';
+import {InicioComponent} from './inicio/inicio.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -24,10 +33,20 @@ import { ItemDetailComponent } from "./item/item-detail.component";
     declarations: [
         AppComponent,
         ItemsComponent,
-        ItemDetailComponent
+        ItemDetailComponent,
+        CamionesComponent,
+        ListadoCamionesComponent,
+        RutasComponent,
+        ListadoRutasComponent,
+        CargasComponent,
+        ListadoCargasComponent,
+        InicioComponent
     ],
     providers: [
-        ItemService
+        ItemService,
+        CamionesService,
+        RutasService
+
     ],
     schemas: [
         NO_ERRORS_SCHEMA
