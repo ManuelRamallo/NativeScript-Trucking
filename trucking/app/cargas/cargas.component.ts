@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Carga} from '../models/Carga';
+import {cargaService} from '../services/carga.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -8,8 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargasComponent implements OnInit {
 
-  constructor() { }
+  @Input() carga: Carga;
 
-  ngOnInit() { }
+  constructor(private cargaService:cargaService, private route: ActivatedRoute) { }
+
+  ngOnInit() {
+
+      const id = +this.route.snapshot.params["id"];
+      this.carga = this.cargaService.mostarUnaCarga(id);
+
+
+  }
 
 }

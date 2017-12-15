@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Camiones} from '../models/Camiones';
+import {CamionesService} from '../services/camiones.service';
 
 @Component({
   moduleId: module.id,
@@ -8,8 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoCamionesComponent implements OnInit {
 
-  constructor() { }
+  listadoCamiones:Camiones[]=[];
 
-  ngOnInit() { }
+
+  constructor( private servicioCamiones: CamionesService ) { }
+
+  ngOnInit() {
+
+    this.listadoCamiones = this.servicioCamiones.mostrarCamiones();
+
+  }
 
 }

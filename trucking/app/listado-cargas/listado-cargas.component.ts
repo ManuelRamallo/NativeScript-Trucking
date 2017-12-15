@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {cargaService} from '../services/carga.service';
+import {Carga} from '../models/Carga';
 
 @Component({
   moduleId: module.id,
@@ -8,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoCargasComponent implements OnInit {
 
-  constructor() { }
+  listaCarga:Carga[]=[]
 
-  ngOnInit() { }
+  constructor(private cargasService: cargaService) { }
+
+  ngOnInit() {
+
+    this.listaCarga= this.cargasService.mostrarCarga();
+  }
 
 }

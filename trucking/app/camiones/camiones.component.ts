@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Camiones} from '../models/Camiones';
+import {CamionesService} from '../services/camiones.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -8,8 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CamionesComponent implements OnInit {
 
-  constructor() { }
+  @Input() camion:Camiones;
 
-  ngOnInit() { }
+  constructor(private camionesservice:CamionesService, private route: ActivatedRoute) { }
+
+  ngOnInit() {
+
+      const id = +this.route.snapshot.params["id"];
+      this.camion = this.camionesservice.mostrarUnCamion(id);
+
+  }
 
 }

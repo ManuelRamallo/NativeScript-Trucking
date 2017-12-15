@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {RutasService} from '../services/rutas.service';
+import {Rutas} from '../models/Rutas';
 
 @Component({
   moduleId: module.id,
@@ -8,8 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoRutasComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() { }
+  listaRutas:Rutas[]=[];
+
+  constructor(private servicioRutas:RutasService) { }
+
+  ngOnInit() {
+
+    this.listaRutas= this.servicioRutas.mostrarRutas();
+
+  }
 
 }
