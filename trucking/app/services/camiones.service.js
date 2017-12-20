@@ -1,20 +1,30 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular/core");
-let default_1 = class {
-};
-default_1 = __decorate([
-    core_1.Injectable()
-], default_1);
- %  > Service;
-{
-    constructor();
-    { }
-}
-//# sourceMappingURL=__name__.service.js.map
+var core_1 = require("@angular/core");
+var CamionesService = (function () {
+    function CamionesService() {
+        //Lista de camiones
+        this.camiones = new Array({ id: 1, altura: 2.12, peso: 3.2, marca: "Mercedes Benz" }, { id: 2, altura: 2.42, peso: 3.42, marca: "BMW" }, { id: 3, altura: 2.62, peso: 3.52, marca: "Seat" }, { id: 4, altura: 2.82, peso: 3.72, marca: "KIA" }, { id: 5, altura: 2.72, peso: 3.28, marca: "POWER" }, { id: 6, altura: 2.12, peso: 3.21, marca: "Peugeot" }, { id: 7, altura: 2.22, peso: 3.22, marca: "Fiat" }, { id: 8, altura: 2.43, peso: 3.23, marca: "Volvo" }, { id: 9, altura: 2.95, peso: 3.32, marca: "Naranja" });
+    }
+    //Mostrar Todos los camiones
+    CamionesService.prototype.mostrarCamiones = function () {
+        return this.camiones;
+    };
+    //Mostrar Un Camion
+    CamionesService.prototype.mostrarUnCamion = function (id) {
+        return this.camiones.filter(function (camiones) { return camiones.id === id; })[0];
+    };
+    //Agregar Camion
+    CamionesService.prototype.agregarCamion = function () {
+    };
+    //Elminiar Camion
+    CamionesService.prototype.eliminarCamion = function () {
+    };
+    CamionesService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [])
+    ], CamionesService);
+    return CamionesService;
+}());
+exports.CamionesService = CamionesService;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FtaW9uZXMuc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImNhbWlvbmVzLnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxzQ0FBMkM7QUFJM0M7SUFJRTtRQUdBLG1CQUFtQjtRQUNULGFBQVEsR0FBRyxJQUFJLEtBQUssQ0FDeEIsRUFBRSxFQUFFLEVBQUUsQ0FBQyxFQUFFLE1BQU0sRUFBQyxJQUFJLEVBQUUsSUFBSSxFQUFDLEdBQUcsRUFBRSxLQUFLLEVBQUUsZUFBZSxFQUFFLEVBQ3hELEVBQUUsRUFBRSxFQUFFLENBQUMsRUFBRSxNQUFNLEVBQUMsSUFBSSxFQUFFLElBQUksRUFBQyxJQUFJLEVBQUUsS0FBSyxFQUFFLEtBQUssRUFBRSxFQUMvQyxFQUFFLEVBQUUsRUFBRSxDQUFDLEVBQUUsTUFBTSxFQUFDLElBQUksRUFBRSxJQUFJLEVBQUMsSUFBSSxFQUFFLEtBQUssRUFBRSxNQUFNLEVBQUUsRUFDaEQsRUFBRSxFQUFFLEVBQUUsQ0FBQyxFQUFFLE1BQU0sRUFBQyxJQUFJLEVBQUUsSUFBSSxFQUFDLElBQUksRUFBRSxLQUFLLEVBQUUsS0FBSyxFQUFFLEVBQy9DLEVBQUUsRUFBRSxFQUFFLENBQUMsRUFBRSxNQUFNLEVBQUMsSUFBSSxFQUFFLElBQUksRUFBQyxJQUFJLEVBQUUsS0FBSyxFQUFFLE9BQU8sRUFBRSxFQUNqRCxFQUFFLEVBQUUsRUFBRSxDQUFDLEVBQUUsTUFBTSxFQUFDLElBQUksRUFBRSxJQUFJLEVBQUMsSUFBSSxFQUFFLEtBQUssRUFBRSxTQUFTLEVBQUUsRUFDbkQsRUFBRSxFQUFFLEVBQUUsQ0FBQyxFQUFFLE1BQU0sRUFBQyxJQUFJLEVBQUUsSUFBSSxFQUFDLElBQUksRUFBRSxLQUFLLEVBQUUsTUFBTSxFQUFFLEVBQ2hELEVBQUUsRUFBRSxFQUFFLENBQUMsRUFBRSxNQUFNLEVBQUMsSUFBSSxFQUFFLElBQUksRUFBQyxJQUFJLEVBQUUsS0FBSyxFQUFFLE9BQU8sRUFBRSxFQUNqRCxFQUFFLEVBQUUsRUFBRSxDQUFDLEVBQUUsTUFBTSxFQUFDLElBQUksRUFBRSxJQUFJLEVBQUMsSUFBSSxFQUFFLEtBQUssRUFBRSxTQUFTLEVBQUUsQ0FFdEQsQ0FBQztJQWZZLENBQUM7SUFpQmpCLDRCQUE0QjtJQUU1Qix5Q0FBZSxHQUFmO1FBRUUsTUFBTSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUE7SUFDdEIsQ0FBQztJQUVELG1CQUFtQjtJQUVuQix5Q0FBZSxHQUFmLFVBQWlCLEVBQVU7UUFHdkIsTUFBTSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLFVBQUEsUUFBUSxJQUFJLE9BQUEsUUFBUSxDQUFDLEVBQUUsS0FBSyxFQUFFLEVBQWxCLENBQWtCLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztJQUVuRSxDQUFDO0lBRUQsZ0JBQWdCO0lBRWhCLHVDQUFhLEdBQWI7SUFFQSxDQUFDO0lBRUQsaUJBQWlCO0lBRWpCLHdDQUFjLEdBQWQ7SUFFQSxDQUFDO0lBL0NVLGVBQWU7UUFEM0IsaUJBQVUsRUFBRTs7T0FDQSxlQUFlLENBd0QzQjtJQUFELHNCQUFDO0NBQUEsQUF4REQsSUF3REM7QUF4RFksMENBQWUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbmplY3RhYmxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7Q2FtaW9uZXN9IGZyb20gJy4uL21vZGVscy9DYW1pb25lcyc7XHJcblxyXG5ASW5qZWN0YWJsZSgpXHJcbmV4cG9ydCBjbGFzcyBDYW1pb25lc1NlcnZpY2Uge1xyXG5cclxuXHJcblxyXG4gIGNvbnN0cnVjdG9yKCkgeyB9XHJcblxyXG5cclxuICAvL0xpc3RhIGRlIGNhbWlvbmVzXHJcbiAgICBwcml2YXRlIGNhbWlvbmVzID0gbmV3IEFycmF5PENhbWlvbmVzPihcclxuICAgICAgICB7IGlkOiAxLCBhbHR1cmE6Mi4xMiwgcGVzbzozLjIsIG1hcmNhOiBcIk1lcmNlZGVzIEJlbnpcIiB9LFxyXG4gICAgICAgIHsgaWQ6IDIsIGFsdHVyYToyLjQyLCBwZXNvOjMuNDIsIG1hcmNhOiBcIkJNV1wiIH0sXHJcbiAgICAgICAgeyBpZDogMywgYWx0dXJhOjIuNjIsIHBlc286My41MiwgbWFyY2E6IFwiU2VhdFwiIH0sXHJcbiAgICAgICAgeyBpZDogNCwgYWx0dXJhOjIuODIsIHBlc286My43MiwgbWFyY2E6IFwiS0lBXCIgfSxcclxuICAgICAgICB7IGlkOiA1LCBhbHR1cmE6Mi43MiwgcGVzbzozLjI4LCBtYXJjYTogXCJQT1dFUlwiIH0sXHJcbiAgICAgICAgeyBpZDogNiwgYWx0dXJhOjIuMTIsIHBlc286My4yMSwgbWFyY2E6IFwiUGV1Z2VvdFwiIH0sXHJcbiAgICAgICAgeyBpZDogNywgYWx0dXJhOjIuMjIsIHBlc286My4yMiwgbWFyY2E6IFwiRmlhdFwiIH0sXHJcbiAgICAgICAgeyBpZDogOCwgYWx0dXJhOjIuNDMsIHBlc286My4yMywgbWFyY2E6IFwiVm9sdm9cIiB9LFxyXG4gICAgICAgIHsgaWQ6IDksIGFsdHVyYToyLjk1LCBwZXNvOjMuMzIsIG1hcmNhOiBcIk5hcmFuamFcIiB9LFxyXG5cclxuICAgICk7XHJcblxyXG4gIC8vTW9zdHJhciBUb2RvcyBsb3MgY2FtaW9uZXNcclxuXHJcbiAgbW9zdHJhckNhbWlvbmVzKCk6IENhbWlvbmVzW117XHJcblxyXG4gICAgcmV0dXJuIHRoaXMuY2FtaW9uZXNcclxuICB9XHJcblxyXG4gIC8vTW9zdHJhciBVbiBDYW1pb25cclxuXHJcbiAgbW9zdHJhclVuQ2FtaW9uKCBpZDogbnVtYmVyKSA6IENhbWlvbmVze1xyXG5cclxuXHJcbiAgICAgIHJldHVybiB0aGlzLmNhbWlvbmVzLmZpbHRlcihjYW1pb25lcyA9PiBjYW1pb25lcy5pZCA9PT0gaWQpWzBdO1xyXG5cclxuICB9XHJcblxyXG4gIC8vQWdyZWdhciBDYW1pb25cclxuXHJcbiAgYWdyZWdhckNhbWlvbigpe1xyXG5cclxuICB9XHJcblxyXG4gIC8vRWxtaW5pYXIgQ2FtaW9uXHJcblxyXG4gIGVsaW1pbmFyQ2FtaW9uKCl7XHJcblxyXG4gIH1cclxuXHJcblxyXG5cclxuXHJcblxyXG5cclxuXHJcblxyXG59XHJcbiJdfQ==

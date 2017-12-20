@@ -2,7 +2,6 @@
   <library name="tsconfig$roots" type="javaScript">
     <properties>
       <sourceFilesUrls>
-<<<<<<< HEAD
         <item url="file://$PROJECT_DIR$/node_modules/tns-core-modules" />
         <item url="file://$PROJECT_DIR$/node_modules" />
       </sourceFilesUrls>
@@ -10,15 +9,6 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/node_modules/tns-core-modules" />
       <root url="file://$PROJECT_DIR$/node_modules" />
-=======
-        <item url="file://$PROJECT_DIR$/node_modules" />
-        <item url="file://$PROJECT_DIR$/node_modules/tns-core-modules" />
-      </sourceFilesUrls>
-    </properties>
-    <CLASSES>
-      <root url="file://$PROJECT_DIR$/node_modules" />
-      <root url="file://$PROJECT_DIR$/node_modules/tns-core-modules" />
->>>>>>> f43102b5451e45ea028f5e205690f74ed8486470
     </CLASSES>
     <SOURCES />
   </library>
